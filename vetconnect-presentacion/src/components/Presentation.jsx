@@ -6,7 +6,7 @@ import imagen2 from './imagen2.png'
 
 export default function Presentation() {
     function abrirEnlace() {
-        window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+        window.open('', '_blank');
     }
     return (
         <div className="landing-page">
