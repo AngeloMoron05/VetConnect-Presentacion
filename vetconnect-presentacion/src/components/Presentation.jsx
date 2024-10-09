@@ -1,18 +1,25 @@
 import React from 'react'
 import './presentation.css'
 import logo from './logo.png'
+import imagen1 from './imagen1.png'
+import imagen2 from './imagen2.png'
 
 export default function Presentation() {
+    function abrirEnlace() {
+        window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+    }
     return (
         <div className="landing-page">
-            {/* Sección de cabecera */}
             <header className="hero-section">
                 <img className="logoVet" src={logo} alt="logo" />
                 <h1>VetConnect</h1>
             </header>
 
             <section className="screenshot-section">
-                <img src="https://via.placeholder.com/600x400" alt="Captura de pantalla del software" />
+                <div className='imageCtn'>
+                    <img src={imagen1} alt="Captura de pantalla del software" className='image'/>
+                    <img src={imagen2} alt="Captura de pantalla del software" className='image'/>
+                </div>
                 <div className='desP'>
                     <div className='des'>
                         <h1>DESCRIPCION</h1>
@@ -22,26 +29,34 @@ export default function Presentation() {
                 </div>
             </section>
 
-            {/* Sección de características */}
             <section className="features-section">
                 <h1>CARACTERISTICAS</h1>
                 <div className="features-list">
                     <div className="feature-item">
-                        <h3>Fácil de Usar</h3>
-                        <p>Interfaz intuitiva diseñada para ser simple y eficiente.</p>
+                        <h3>Informacion Actualizada</h3>
+                        <p>Asegura que las direcciones y datos de contacto de los veterinarios estén siempre al día.</p>
                     </div>
                     <div className="feature-item">
-                        <h3>Alta Velocidad</h3>
-                        <p>Procesa datos a la velocidad de la luz para resultados rápidos.</p>
+                        <h3>Acceso fácil y rápido</h3>
+                        <p> Permite a los clientes encontrar veterinarios disponibles de manera eficiente.</p>
                     </div>
                     <div className="feature-item">
-                        <h3>Soporte 24/7</h3>
-                        <p>Siempre estamos aquí para ayudarte, sin importar la hora.</p>
+                        <h3>Transparencia y Confianza</h3>
+                        <p>Sistema de calificaciones y verificación de credenciales para asegurar la calidad del servicio.</p>
+                    </div>
+                </div>
+                <div className="features-list">
+                    <div className="feature-item">
+                        <h3>Cobertura Amplia</h3>
+                        <p>Aumenta la disponibilidad de veterinarios en diversas regiones a través de promociones e incentivos.</p>
+                    </div>
+                    <div className="feature-item">
+                        <h3>Facilidad de uso</h3>
+                        <p>Interfaz amigable y procesos intuitivos para ambas partes.</p>
                     </div>
                 </div>
             </section>
 
-            {/* Sección de testimonios */}
             <section className="tablaDatos">
                 <h1>REQUERIMIENTOS DEL PRODUCTO</h1>
                 <div className='tabla'>
@@ -110,15 +125,13 @@ export default function Presentation() {
                 </div>
             </section>
 
-            {/* Sección de llamada a la acción */}
             <section className="cta-section">
                 <h2>¡Empieza ahora con VetConnect!</h2>
-                <button className="cta-button">Prueba Gratis</button>
+                <button className="cta-button" onClick={abrirEnlace}>Prueba</button>
             </section>
 
-            {/* Pie de página */}
             <footer className="footer">
-                <p>© 2024 [Nombre de la Empresa]. Todos los derechos reservados.</p>
+                <p>© 2024 VetConnect. Todos los derechos reservados.</p>
             </footer>
         </div>
     )
